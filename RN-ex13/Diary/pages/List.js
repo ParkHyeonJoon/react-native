@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import styled from 'styled-components/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import _ from 'lodash';
-import { Button as Btn2 } from "react-native";
+import { Button as Btn } from "react-native";
 import { View } from "react-native";
 
 
@@ -68,9 +68,7 @@ function List({navigation}) {
                             onPress={ () => navigation.navigate( 'Detail', {date:item.date})}>
                             <Label>{item.date}</Label>
                             <BtnContainer>
-                                <Btn2 title="수정" onPress={ () => navigation.navigate( 'Form', {date:item.date, text: item.text, onEdit: load, isEdit: true})}/>
-                                <View style={{ width: 5 }} />
-                                <Btn2 title="삭제" onPress={() => remove(item.date)}/>
+                                <Btn title="삭제" onPress={() => remove(item.date)}/>
                             </BtnContainer>
                         </ListItem>
                     )

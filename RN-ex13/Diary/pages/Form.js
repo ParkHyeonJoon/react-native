@@ -100,7 +100,7 @@ function Form({navigation, route}) {
                 />
             </Contents>
             <Button onPress={handleButtonPress}>
-                {route.params.isEdit ? '수정' : '저장'}
+                저장
             </Button>
         </Container>
     )
